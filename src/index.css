@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url(/fonts/poppins-bold.woff) format("woff"),
+      url(/fonts/poppins-bold.woff2) format("woff2");
+      font-display:swap;
+}
+@font-face {
+  font-family: 'Poppins-semibold';
+  src: url(/fonts/poppins-semibold.woff) format("woff"),
+      url(/fonts/poppins-semibold.woff2) format("woff2");
+      font-display:swap;
+}
+@font-face {
+  font-family: 'Poppins-regular';
+  src: url(/fonts/poppins-regular.woff) format("woff"),
+      url(/fonts/poppins-regular.woff2) format("woff2");
+      font-display:swap;
+}
+
+:root {
+  --primary: 0 0 0;
+  --secondary: 242 242 242;
+  --accent: 193 226 125;
+  --content:255 255 255;
+  --line: 212, 212 ,212;
+  --alert:220 38 38;
+  --disable: 127 127 127;
+  --info: 67 130 208;
+  --warning: 177 130 47;
+}
+
+.dark{
+  --primary: 255 255 255;
+  --secondary: 22 22 22;
+  --accent: 0 0 0;
+  --content: 193 226 125;
+  --line: 14, 14, 14;
+  --alert:220 38 38;
+  --disable: 127 127 127;
+  --info: 67 130 208;
+  --warning: 177 130 47;
+}
+
+.container{
+  @apply max-w-[90rem] p-6 w-full mx-auto
+}
+
+@layer base{
+  body{
+    @apply bg-accent  font-regular
+  }
+
+  ul{
+    @apply list-none 
+  }
+
+  img{
+    @apply block w-full h-auto
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    @apply font-thicker text-primary
+  }
+
+  h1{
+    @apply text-3xl mb-4
+  }
+  h2{
+    @apply text-xl mb-4
+  }
+  h3{
+    @apply text-lg mb-2
+  }
+  h4{
+    @apply text-base mb-4
+  }
+
+  p{
+    @apply mb-2 text-balance text-primary !leading-6
+  }
+  table{
+    @apply w-full text-sm 
+  }
+  table th{
+    @apply font-bold py-4 px-2 text-left text-primary
+  }
+  table td{
+    @apply p-2 text-left text-primary
+  }
+  table tbody tr:nth-child(odd){
+    @apply bg-secondary bg-opacity-20
+  }
+}
+
+@layer components{
+  .header ul li a{
+    @apply flex justify-center px-5 py-1 
+  }
+  .header ul li:hover{
+    @apply bg-white/50 text-center text-white rounded-full
+  }
+  
+  .btn{
+    @apply px-3 py-1 rounded-full text-sm 
+  }
+  .btn-light{
+    @apply bg-white/50 text-black
+  }
+  .btn-dark{
+    @apply bg-black text-white
+  }
+  .btn-light:hover{
+    @apply bg-black text-white
+  }
+  .btn-dark:hover{
+    @apply bg-white/50 text-black shadow-lg
+  }
+
+ 
+
+ 
+  
+  .slick-next, .slick-prev{
+  @apply shadow-lg;
+  }
+ 
+
+  .social_btn{
+    @apply bg-stone-400 rounded-full p-1
+  }
+ 
+
+  .nav{
+    @apply space-y-4 mt-20
+  }
+  .nav-link{
+    @apply p-1 pl-8
+  }
+  .nav-link a{
+    @apply flex gap-3 items-center
+  }
+  .nav-link.active{
+    @apply border-l border-accent
+  }
+  .nav-link.active{
+    @apply bg-content/45 rounded-lg
+  }
+  .nav-link:hover{
+    @apply bg-content/45 rounded-lg
+  }
+
+  .tab-link{
+    @apply px-3 py-5
+  }
+  .tab-link.active{
+    @apply border-b border-accent
+  }
+  .tab-link.active a{
+    @apply text-accent
+  }
+
+  /* .btn{
+    @apply px-2 py-1 rounded-md text-sm transition-colors flex items-center gap-2
+  } */
+  .btn:disabled{
+    @apply cursor-not-allowed opacity-60
+  }
+
+  .btn-form{
+    @apply p-2 w-1/2 flex justify-center items-center gap-2
+  }
+
+  .btn--content{
+    @apply bg-content text-primary
+  }
+
+  .btn--accent{
+    @apply bg-accent text-primary
+  }
+  .btn--disable{
+    @apply bg-disable text-stone-800
+  }
+  .btn--alert{
+    @apply bg-alert text-primary
+  }
+  .btn--info{
+    @apply bg-info text-primary
+  }
+  .btn--cancel{
+    @apply bg-disable text-primary
+  }
+  .btn--warning{
+    @apply bg-warning text-primary
+  }
+  .table-action ul{
+    @apply flex gap-4 
+  }
+  .form-action{
+    @apply flex gap-2 justify-end
+  }
+ .tooltip{
+    @apply text-base relative text-primary
+  }
+  .tooltip:hover::after{
+    @apply scale-100
+  }
+ .tooltip::after{
+    @apply absolute content-[attr(data-tooltip)] text-xs p-0.5 px-1.5 text-primary z-10 bg-content bg-opacity-90 top-[calc(100%+10px)] left-1/2 -translate-x-1/2 scale-0 transition-transform rounded-sm
+  }
+  .input-wrap{
+    @apply mb-3 relative
+  }
+  .input-wrap label{
+    @apply  mb-1 block text-xs
+  }
+  .input-wrap input,
+  .input-wrap select,
+  .input-wrap textarea{
+  @apply block w-full text-stone-800 focus:text-info px-1 py-2 rounded-md outline-none border-2 focus:border-info focus:bg-info/5
+  }
+  .input-wrap small{
+    @apply absolute top-1 right-1 text-red-600
+  }
+  .loading-bar::after {
+    @apply content-[''] absolute top-0 left-0 w-[180%] h-full  bg-gradient-to-r from-transparent via-black/40 to-transparent  animate-loading;
+  }
+}
+
+.spinner circle {
+  fill: none;
+  /* stroke: var(--light); */
+  stroke-width: 6;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash 1s ease-in-out infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -110px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+

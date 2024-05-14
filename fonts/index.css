@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url(/fonts/poppins-bold.woff) format("woff"),
+      url(/fonts/poppins-bold.woff2) format("woff2");
+      font-display:swap;
+}
+@font-face {
+  font-family: 'Poppins-semibold';
+  src: url(/fonts/poppins-semibold.woff) format("woff"),
+      url(/fonts/poppins-semibold.woff2) format("woff2");
+      font-display:swap;
+}
+@font-face {
+  font-family: 'Poppins-regular';
+  src: url(/fonts/poppins-regular.woff) format("woff"),
+      url(/fonts/poppins-regular.woff2) format("woff2");
+      font-display:swap;
+}
+
+:root {
+  --primary: 255 255 255;
+  --secondary: 242 242 242;
+  --accent: 193 226 125;
+  --content: 20, 20, 20;
+  --line: 212, 212 ,212;
+}
+
+.dark{
+  --primary: 20, 20, 20;
+  --secondary: 22 22 22;
+  --accent: 193 226 125;
+  --content: 255 255 255;
+  --line: 14 14 14;
+}
+
+.container{
+  @apply max-w-[90rem] p-6 w-full mx-auto
+}
+
+@layer base{
+  
+  body{
+    @apply bg-accent text-content font-regular
+  }
+  a{
+    @apply text-content font-regular
+  }
+
+  ul{
+    @apply list-none text-content font-regular
+  }
+
+  img{
+    @apply block w-full h-auto
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    @apply font-thicker text-content
+  }
+
+  h1{
+    @apply text-3xl mb-4
+  }
+  h2{
+    @apply text-xl mb-4
+  }
+  h3{
+    @apply text-lg mb-2
+  }
+  h4{
+    @apply text-base mb-4
+  }
+
+  p{
+    @apply mb-2 text-black !leading-6 
+  }
+  table{
+    @apply w-full text-sm 
+  }
+  table th{
+    @apply font-bold py-4 px-2 text-left 
+  }
+  table td{
+    @apply p-2 text-left 
+  }
+  table tbody tr:nth-child(odd){
+    @apply bg-secondary bg-opacity-20
+  }
+}
+
+@layer components{
+  
+  .header ul li a{
+    @apply flex justify-center px-5 py-1 
+  }
+  .header ul li:hover{
+    @apply bg-white/50 text-center text-white rounded-full
+  }
+  
+  .btn{
+    @apply px-3 py-1 rounded-full text-sm 
+  }
+  .btn-light{
+    @apply bg-primary/50 text-black
+  }
+  .btn-dark{
+    @apply bg-black text-primary 
+  }
+  .btn-light:hover{
+    @apply bg-black text-primary
+  }
+  .btn-dark:hover{
+    @apply bg-white/50 text-black shadow-lg
+  }
+
+  .slick-dots {
+    @apply absolute top-[-50px] left-[40%] pointer-events-none
+  }
+  
+  .slick-dots li button:before {
+    @apply content-[''] w-[22px] h-[3px] bg-zinc-800 mx-1 pointer-events-auto
+      
+  }
+  
+  .slick-next, .slick-prev{
+  @apply h-full opacity-0 hover:opacity-100 z-20;
+  }
+  .slick-arrow{
+    @apply opacity-0 hover:opacity-100 transition-all bg-black/0 hover:bg-black/20
+  }
+  .slick-arrow:hover svg{
+    @apply opacity-100 
+  }
+  
+  .slick-next, .slick-prev{
+    @apply h-full opacity-50 hover:opacity-100 flex flex-col justify-center items-center mt-[-2px];
+    svg{
+        @apply h-fit 
+        text-white text-4xl opacity-0 hover:opacity-100;
+    }
+  }
+  .slick-next::before, .slick-prev::before{
+    @apply hidden;
+  }
+
+  .social_btn{
+    @apply bg-stone-400 rounded-full p-1
+  }
+ 
+}
+*{@apply min-w-0 min-h-0}
