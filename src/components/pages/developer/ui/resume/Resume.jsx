@@ -4,6 +4,14 @@ import { SiAdobephotoshop } from 'react-icons/si'
 import { TbBrandCss3 } from 'react-icons/tb'
 
 const Resume = () => {
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '../../../../../../public/Resume.pdf';
+    link.download = 'resume_michaela.pdf';
+    link.click();
+  };
+
   return (
  
     <div className="container">
@@ -12,7 +20,7 @@ const Resume = () => {
             <h1 className='mt-6 mb-7 text-[4.5rem] text-center tracking-wide text-white '>RESUME</h1>
             <img src="../../../../public/resume.jpg" alt="" className='w-[315px]  rounded-3xl'/>
             <div className='flex justify-end '>
-            <button className='btn btn-light bg-white px-5 py-2 absolute bottom-7 right-2 z-10 '>Download CV</button>
+            <button className='btn btn-light bg-white px-5 py-2 absolute bottom-7 right-2 z-10 ' onClick={handleDownloadResume}>Download CV</button>
             </div>
           </div>
 

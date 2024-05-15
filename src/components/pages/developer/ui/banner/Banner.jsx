@@ -1,6 +1,14 @@
 import React from 'react'
 
 const Banner = () => {
+
+    const handleDownloadResume = () => {
+        const link = document.createElement('a');
+        link.href = '../../../../../../public/Resume.pdf';
+        link.download = 'resume_michaela.pdf';
+        link.click();
+      };
+
   return (
     
         <div className="container">
@@ -11,7 +19,7 @@ const Banner = () => {
                 <p className='text-black text-sm '>A WEB DESIGNER AND GRAPHIC DESIGNER</p>
                 <ul className='flex gap-2 mt-4'>
                     <li><button className='btn btn-light'>Let's Talk</button></li>
-                    <li><button className='btn btn-dark'>Download CV </button></li>              
+                    <li><button className='btn btn-dark' onClick={handleDownloadResume}>Download CV </button></li>              
                 </ul>
             </div>
 

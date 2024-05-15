@@ -19,11 +19,11 @@ const ModalProject = ({position,info}) => {
                 <img src={`${devBaseImgUrl}/${info.portfolio_image}`}  alt="" className='w-full h-[400px] object-cover rounded-lg'/>
 
                 <div className='content'>
-                    <h3>{info.portfolio_title}</h3>
-                    <p className='h-[330px] '>{info.portfolio_description}</p>
+                    <h3 className='text-3xl mb-5'>{info.portfolio_title}</h3>
+                    <p className=' w-[380px] text-justify'>{info.portfolio_description}</p>
 
                     <div className='flex justify-end'>
-                    <Link to={info.portfolio_link}><button className='btn btn--accent '>Go to Project</button></Link>
+                    <Link to={info.portfolio_link}><button className='btn btn--accent absolute bottom-4 right-4'>Go to Project</button></Link>
                     </div>
                     
                 </div>
