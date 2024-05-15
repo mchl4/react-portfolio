@@ -1,5 +1,6 @@
 import React from 'react'
 import { IoLogoBehance } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 const Hire = () => {
   return (
@@ -10,8 +11,8 @@ const Hire = () => {
               <h2 className='text-4xl text-black'>Why you hire me for your project?</h2>
               <p className='text-justify'>Hire me for your next project because I bring a combination of passion, expertise in UI/UX, graphic design, and video editing. My commitment to crafting compelling digital experiences, attention to detail, and creative versatility ensures that your project receives a unique and impactful touch. Let's collaborate to bring your vision to life.</p>
               <ul className='flex gap-2 items-center '>
-              <li><button className='social_btn'><IoLogoBehance className='text-3xl' /></button></li>
-              <li><button className='btn btn-dark'>Portfolio</button></li>  
+              <li><Link to="https://www.behance.net/michaelaarbilo1"><button className='social_btn'><IoLogoBehance className='text-3xl' /></button></Link></li>
+              <li><Link to="https://www.behance.net/michaelaarbilo1"><button className='btn btn-dark'>Portfolio</button></Link></li>  
               </ul>
             </div>
             <img src="../../../../public/hire_me.png" alt="" className='w-[600px]'/>

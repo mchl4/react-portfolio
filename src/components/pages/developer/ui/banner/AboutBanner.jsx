@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebook, FaInstagram } from 'react-icons/fa'
 import { IoLogoBehance } from 'react-icons/io5'
 import { MdOutlineEmail } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const AboutBanner = () => {
   return (
@@ -19,10 +20,10 @@ const AboutBanner = () => {
            <p className='text-justify'>My passion extends beyond web development and web/graphic design; I also excel in the art of video editing. This multifaceted skill set allows me to bring a comprehensive and creative approach to every project, ensuring a holistic and polished result that resonates with your audience.</p>
            <div className='flex items-center justify-end mt-10'>
                <ul className='flex gap-2 items-center '>
-                   <li><button className='social_btn'><IoLogoBehance className='text-2xl' /></button></li>
-                   <li><button className='social_btn'><FaFacebook className='text-2xl'/></button></li>
-                   <li><button className='social_btn'><FaInstagram className='text-2xl text-gray-800 bg-black rounded-full p-1'/></button></li>
-                   <li><button className='social_btn'><MdOutlineEmail className='text-2xl text-gray-800 bg-black rounded-full p-1'/></button></li>
+                   <li><Link to="https://www.behance.net/michaelaarbilo1"><button className='social_btn'><IoLogoBehance className='text-2xl' /></button></Link></li>
+                   <li><Link><button className='social_btn'><FaFacebook className='text-2xl'/></button></Link></li>
+                   <li><Link to="https://www.instagram.com/mchlrbl_/?next=%2F"><button className='social_btn'><FaInstagram className='text-2xl text-gray-800 bg-black rounded-full p-1'/></button></Link></li>
+                   <li><Link to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDXmbBQWlWcVBwKKtpGWhqZrVtnjgxnbVGCRbxxpSfKRDkjJPzHvvQhSBjhQTqrWwknGxWP"><button className='social_btn'><MdOutlineEmail className='text-2xl text-gray-800 bg-black rounded-full p-1'/></button></Link></li>
                </ul>
            </div>
          </div>
