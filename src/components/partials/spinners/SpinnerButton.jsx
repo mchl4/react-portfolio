@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from "./Spinner";
 
-const SpinnerButton = ({ css = "stroke-white" }) => {
+const SpinnerButton = ({ css = "stroke-black" }) => {
   return (
     <>
       <div className="flex justify-center items-center flex-col text-center rounded-full">
