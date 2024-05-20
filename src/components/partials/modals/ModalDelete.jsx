@@ -47,8 +47,8 @@ const ModalDelete = ({position,endpoint,queryKey}) => {
             <div className='flex gap-4 items-center '>
                 <LiaTrashAltSolid className='text-4xl text-alert mb-3'/>
                 <div>
-                    <h2 className='mb-2'>Removing Record</h2>
-                    <p className='mb-5'>Are you sure you want to trash this record?</p>
+                    <h2 className='mb-2 text-accent'>Removing Record</h2>
+                    <p className='mb-5 text-accent'>Are you sure you want to trash this record?</p>
                 </div>
               </div>
               <div className='flex justify-end gap-2  '>

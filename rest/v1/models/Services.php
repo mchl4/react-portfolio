@@ -1,6 +1,6 @@
 <?php
 
-Class services{
+Class Services{
     public $services_aid;
     public $services_title;
     public $services_image;

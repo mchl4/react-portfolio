@@ -51,8 +51,8 @@ const queryClient = useQueryClient();
             <div className='flex gap-4 items-center '>
                 <RiInboxArchiveLine className='text-4xl text-warning mb-3'/>
                 <div>
-                    <h2 className='mb-2'>{isArchiving ? "Restore" : "Archive"} Record</h2>
-                    <p className='mb-5'>Are you sure you want to {isArchiving === 1 ? "restore" : "archive"}this record?</p>
+                    <h2 className='mb-2 text-accent'>{isArchiving ? "Restore" : "Archive"} Record</h2>
+                    <p className='mb-5 text-accent'>Are you sure you want to {isArchiving === 1 ? "restore" : "archive"} this record?</p>
                 </div>
               </div>
               <div className='flex justify-end gap-2  '>

@@ -1,6 +1,6 @@
 <?php
 
-Class portfolio{
+Class Portfolio{
     public $portfolio_aid;
     public $portfolio_title;
     public $portfolio_image;
